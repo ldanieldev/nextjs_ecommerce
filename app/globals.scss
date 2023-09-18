@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input.hideInputArrows::-webkit-outer-spin-button,
+input.hideInputArrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input.hideInputArrows[type='number'] {
+  -moz-appearance: textfield;
+}
+
+h1 {
+  @apply mt-2 text-2xl font-semibold text-gray-800 md:text-3xl dark:text-white;
+}
+
+.adminContainer {
+  table {
+    @apply table table-compact table-zebra w-full
+  }
+
+  form {
+    label {
+      @apply label;
+    }
+
+    input[type="text"], input[type="number"], input[type="password"] {
+      @apply input input-bordered w-full;
+    }
+
+    textarea {
+      @apply textarea textarea-bordered w-full;
+    }
+
+    select {
+      @apply select select-bordered w-full;
+    }
+
+    button,
+    [type='button'],
+    [type='reset'],
+    [type='submit'] {
+      @apply btn btn-primary w-full md:btn-wide;
+    }
+  }
+}
+
